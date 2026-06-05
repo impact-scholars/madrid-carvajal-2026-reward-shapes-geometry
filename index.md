@@ -4,6 +4,8 @@ abstract: |
     Learning reshapes cortical activity, but it remains unclear whether population-level changes primarily reflect exposure to sensory statistics or reward-driven assignment of behavioral relevance. We analysed calcium imaging data from mice exposed to the same visual environment with or without reward, and used tensor component analysis to  separate within-trial dynamics from across-trial learning-related structure. Rewarded learning produced a distinct reorganisation of population geometry. After learning, fewer components were sufficient to reconstruct neural activity, and variance became more concentrated in the dominant modes. This compression was not merely a nonspecific reduction in variability, but was task-aligned: the leading variance-explaining components also carried strong stimulus discriminability. These results suggest that reward does not simply enhance sensory selectivity, but reorganises visual cortical population geometry so that behaviorally relevant stimulus dimensions are embedded in the dominant modes of population activity.  
 acknowledgments: |
     This work was supported by the Impact Scholars Program. General-purpose large language models were used for grammar and writing corrections, and for limited code assistance (such as handling error messages and for parallelising and speeding up computations).
+data_availability: |
+    Published via [Impact Scholars](https://github.com/impact-scholars/madrid-carvajal-2026-reward-shapes-geometry); original [development repository](https://github.com/JohnMadrid/madrid-carvajal-2026-reward-shapes-geometry).
 numbering:
   figure:
     template: Figure %s
