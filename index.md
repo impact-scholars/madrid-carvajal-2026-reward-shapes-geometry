@@ -101,9 +101,9 @@ The **unique** variance of component $r$ is its leave-one-out marginal contribut
 
 The **shared** variance of component $r$ is its overlap with the remaining components, quantified by the inner products between rank-1 component tensors:
 \begin{equation}
-\mathrm{VE}_{\text{shared}}(r) = \frac{\langle \mathbf{T}_r,\, \hat{\boldsymbol{\mathcal{X}}} - \mathbf{T}_r\rangle}{\mathrm{SST}} = \frac{\sum_{s \neq r}\langle \mathbf{T}_r,\, \mathbf{T}_s\rangle}{\mathrm{SST}} ,
+\mathrm{VE}_{\text{shared}}(r) = \frac{⟨ \mathbf{T}_r,\, \hat{\boldsymbol{\mathcal{X}}} - \mathbf{T}_r⟩}{\mathrm{SST}} = \frac{\sum_{s \neq r}⟨ \mathbf{T}_r,\, \mathbf{T}_s⟩}{\mathrm{SST}} ,
 \end{equation}
-where each component inner product factorises over the three modes, $\langle \mathbf{T}_r, \mathbf{T}_s\rangle = (\mathbf{u}_r^{\!\top}\mathbf{u}_s)(\mathbf{v}_r^{\!\top}\mathbf{v}_s)(\mathbf{w}_r^{\!\top}\mathbf{w}_s)$. For non-negative CP these cross-products are non-negative, so shared variance cannot cancel across component pairs.
+where each component inner product factorises over the three modes, $⟨ \mathbf{T}_r, \mathbf{T}_s⟩ = (\mathbf{u}_r^{\!\top}\mathbf{u}_s)(\mathbf{v}_r^{\!\top}\mathbf{v}_s)(\mathbf{w}_r^{\!\top}\mathbf{w}_s)$. For non-negative CP these cross-products are non-negative, so shared variance cannot cancel across component pairs.
 
 These two terms partition the full-model variance exactly,
 \begin{equation}
@@ -113,7 +113,7 @@ an identity we verified numerically (residual $< 10^{-8}$) for every session × 
 
 Each session was summarised by its **shared fraction**, the proportion of the *model-explained* variance carried by inter-component overlap,
 \begin{equation}
-\text{shared fraction} = \frac{\sum_{r=1}^{R}\mathrm{VE}_{\text{shared}}(r)}{\mathrm{VE}_{\text{full}}} = \frac{2\sum_{r<s}\langle \mathbf{T}_r,\, \mathbf{T}_s\rangle}{\mathrm{SST}\cdot \mathrm{VE}_{\text{full}}},
+\text{shared fraction} = \frac{\sum_{r=1}^{R}\mathrm{VE}_{\text{shared}}(r)}{\mathrm{VE}_{\text{full}}} = \frac{2\sum_{r<s}⟨ \mathbf{T}_r,\, \mathbf{T}_s⟩}{\mathrm{SST}\cdot \mathrm{VE}_{\text{full}}},
 \end{equation}
 which we report as mean ± SD across the 3 mice in each cohort × timepoint × alignment cell. Note the denominator is $\mathrm{VE}_{\text{full}}$ (the variance the model explains), not the total data variance.
 
@@ -171,7 +171,7 @@ Because non-negative TCA components are not inherently orthogonal, the total var
 
 We first calculated the $R \times R$ gram matrix $G$, where each entry $G_{rs}$ represents the inner product between the $r$-th and $s$-th components:
 \begin{equation}
-G_{rs} = \langle \mathbf{u}_r \circ \mathbf{v}_r \circ \mathbf{w}_r, \mathbf{u}_s \circ \mathbf{v}_s \circ \mathbf{w}_s \rangle = (\mathbf{u}_r^T \mathbf{u}_s) (\mathbf{v}_r^T \mathbf{v}_s) (\mathbf{w}_r^T \mathbf{w}_s)
+G_{rs} = ⟨ \mathbf{u}_r \circ \mathbf{v}_r \circ \mathbf{w}_r, \mathbf{u}_s \circ \mathbf{v}_s \circ \mathbf{w}_s ⟩ = (\mathbf{u}_r^T \mathbf{u}_s) (\mathbf{v}_r^T \mathbf{v}_s) (\mathbf{w}_r^T \mathbf{w}_s)
 \end{equation}
 Components were then reordered using a forward-selection greedy algorithm. The first component ($C_1$) was selected as the one explaining the most total variance. Each subsequent component was chosen to maximize the incremental variance added to the existing set. This ensured that components were ranked by their unique contribution to the neural data, allowing for consistent comparisons across different mice and sessions.
 
