@@ -25,7 +25,7 @@ To separate temporal dynamics within a trial from learning dynamics across trial
 
 **Reward-driven learning results in a lower dimensional rank decomposition.** Nonnegative TCA indicated that after learning, the variance in the rewarded cohort was consistently best captured by an estimated rank of 3 components at tunnel entrance before and after learning, while 4 components are required for the unrewarded cohort (@figure-main B). At sound cue the decomposition after learning resulted in a decrease of one rank for the rewarded cohort. Across all 10 fitted ranks, error curves showed a decrease in reconstruction error for the rewarded cohort after learning, while it remained almost invariant for the unrewarded cohort. Averaged across all sessions and alignments, TCA rank estimated a ($\bar{R} = 3.00$) for the rewarded cohort and it was significantly lower than the unrewarded cohort ($\bar{R} = 4.17$; Mann–Whitney $U = 6.0$, $p = 0.028$, $r = 0.67$), whereas before learning the two groups did not differ significantly ($p = 0.34$). This reduction in rank was accompanied by a decrease in reconstruction error: total variance explained (VE) increased from 0.913 to 0.928 in the rewarded group after learning, while it remained stable in the unrewarded group (~0.926). Moreover, variance was more concentrated in the leading components for the rewarded cohort, with the first two components capturing 90.1% of total VE after learning compared to 78.6% in the unrewarded group ($U = 31, p = 0.041, r = −0.72$). Per-area TCA on size-matched neural populations showed that the increase in variance explained, together with the reduction in estimated rank, could not be explained by differences in the number of recorded neurons across sessions. This observation was supported by both a variance analysis conducted independently per-area and the consistent reduction in the participation ratio of the per-area neural activity after learning (@fig-supp-participation). Together, these results indicate that rewarded learning in this visual paradigm yields a more compact, lower-dimensional neural representation in which fewer components suffice to reconstruct population activity, consistent with a consolidation of task-relevant dynamics into a smaller number of dominant modes. A quantification of shared and unique variance among component's further showed that the rewarded cohort's leading components were more independent than the unrewarded cohort's (@fig-supp-shared-variance, @fig-supp-shared-variance-before-after).
 
-```{figure} figures/figure1.pdf
+```{figure} figures/figure1.*
 :name: figure-main
 :alt: Reward-driven learning results in lower-dimensional representations.
 
@@ -52,7 +52,7 @@ Together, our results suggest that reward-driven learning induces a task-aligned
 
 ## Population geometry changes
 
-```{figure} figures/hypotheses.pdf
+```{figure} figures/hypotheses.*
 :name: fig-supp-hypotheses
 :kind: supplementary
 :alt: Geometry hypotheses.
@@ -62,7 +62,7 @@ Together, our results suggest that reward-driven learning induces a task-aligned
 
 ## Participation ratio
 
-```{figure} figures/fig1sup_part_ratio.pdf
+```{figure} figures/fig1sup_part_ratio.*
 :name: fig-supp-participation
 :kind: supplementary
 :alt: Participation ratio summary across cohorts.
@@ -71,7 +71,7 @@ Together, our results suggest that reward-driven learning induces a task-aligned
 ```
 ## Shared vs. unique variance among TCA components.
 
-```{figure} figures/fig_supp_ve_partition.pdf
+```{figure} figures/fig_supp_ve_partition.*
 :name: fig-supp-shared-variance
 :kind: supplementary
 :alt: Shared vs. unique variance partition across cohorts.
@@ -79,7 +79,7 @@ Together, our results suggest that reward-driven learning induces a task-aligned
 ```
 ## Before versus after learning shared variance across components
 
-```{figure} figures/total_shared_ve_before_after.pdf
+```{figure} figures/total_shared_ve_before_after.*
 :name: fig-supp-shared-variance-before-after
 :kind: supplementary
 :alt: Before versus after learning shared variance across components
