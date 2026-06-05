@@ -12,8 +12,6 @@ numbering:
     template: Supplementary Figure %s
 ---
 
-# Description
-
 A central challenge in systems neuroscience is that learning-related changes in cortical activity can arise either from unsupervised extraction of sensory regularities or from reward-driven assignment of behavioral relevance [@barlow1989unsupervised; @botvinick2020deep; @hebb2005organization]. Passive sensory experience may reshape cortical circuits by repeatedly exposing them to the statistical structure of the environment [@olshausen1996emergence; @bell1997independent; @simoncelli2001natural; @fiser2010statistically].  Reward-driven learning, by contrast, does not merely expose the animal to stimulus regularities, but also assigns behavioral utility to particular sensory events [@schultz2015neuronal; @schultz1997neural; @poort2015learning]. These two forms of learning are therefore computationally distinct: statistical learning extracts regularities from the environment, while rewarded learning uses those regularities to maximize reward [@pakan2018impact; @henschke2020reward; @ferrari2026learning]. Whether they produce similar or distinct changes in cortical population dynamics remain unresolved.
 
 
@@ -47,6 +45,10 @@ This reorganization should be interpreted as a change in the embedding of stimul
 We interpreted the after-learning changes in rewarded-cohort population activity as primarily reflecting reward-guided task experience on visual cortical representations, supported by analyses of residual activity after regressing out running speed. However, running speed does not capture finer movements or internal state fluctuations such as attention, motivation, arousal, or fatigue. Whisking, sniffing, licking preparation, and anticipatory postural adjustments were not recorded. These may occur more often under reward anticipation and could modulate visual cortical activity [@musall2018movement; @ramadan2022standardized], consistent with prior reports of increased whisking or sniffing before expected reward [@yoshimoto2019statistical; @wesson2008sniffing; @dominiak2019whisking; @deschenes2012sniffing]. Some changes in the rewarded cohort could thus reflect anticipatory or motor-preparatory behavior rather than visual representations alone, particularly closer to the sound cue. The cohorts also differed in water-deprivation state, which could affect arousal, motivation, or engagement; since pupil diameter and other state variables were not recorded, these could not be regressed out. Thus, while our results are consistent with reward-dependent reorganization of visual cortical population geometry, unmeasured motor and state variables may also contribute to the cohort differences. Disambiguating these would require richer behavioral monitoring.
 
 Together, our results suggest that reward-driven learning induces a task-aligned compression of visual cortical activity. Repeated sensory experience may be sufficient to generate stimulus selectivity, but reward determines how this information is embedded in the dominant population modes.  More broadly, these findings show that population geometry may reveal which learning objective has shaped the resulting cortical representation.
+
+```{raw:typst}
+#set heading(numbering: none)
+```
 
 # Supplementary material
 

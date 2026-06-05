@@ -1,14 +1,11 @@
 version: 1
 extends:
-- https://raw.githubusercontent.com/impact-scholars/impact-scholars.github.io/v0.1.0/nexus.yml
-- https://raw.githubusercontent.com/impact-scholars/isp-actions-config/v0.1.0/isp-micropublication-2025.yml
+- https://raw.githubusercontent.com/impact-scholars/impact-scholars.github.io/v0.2.0/nexus.yml
+- https://raw.githubusercontent.com/impact-scholars/isp-actions-config/v0.2.0/isp-micropublication-2025.yml
 
 project:
-  # Uncomment and fill when published
-  # doi: 10.5281/zenodo.XXXXXXX
-  # date: YYYY-MM-DD
   authors:
-  - name: Madrid-Carvajal, J.
+  - name: John Jairo Madrid-Carvajal
     orcid: 0000-0001-5505-6499
     corresponding: true
     email: john.madridcarvajal@uos.de
@@ -27,7 +24,7 @@ project:
     - Visualization
     - Writing - original draft
     - Writing - review & editing
-  - name: Jeswanth, R.
+  - name: Rohit Jeswanth
     orcid: 0009-0000-8055-6559
     equal_contributor: true
     email: rohit.jeswanth@research.iiit.ac.in
@@ -43,7 +40,7 @@ project:
     - Validation
     - Writing - original draft
     - Writing - review & editing
-  - name: Singh, I.
+  - name: Ishatpreet Singh
     equal_contributor: true
     email: singhishatpreet2002@gmail.com 
     affiliations:
@@ -58,7 +55,7 @@ project:
     - Validation
     - Writing - original draft
     - Writing - review & editing
-  - name: Kaurinkoski, K.
+  - name: Katja Kaurinkoski
     orcid: 0000-0002-3897-8448
     equal_contributor: true
     email: katja.kaurinkoski@helsinki.fi 
@@ -75,7 +72,7 @@ project:
     - Writing - original draft
     - Writing - review & editing
 
-  - name: Maoutsa, D.
+  - name: Dimitra Maoutsa
     orcid: 0000-0002-3553-8658
     corresponding: true
     email: dimitra.maoutsa@gmail.com
@@ -96,32 +93,24 @@ project:
     - Writing - original draft
     - Writing - review & editing
 
-  exports:
-  - format: typst
-    id: typst-pdf
-    template: templates/lapreprint-typst
-    output: exports/madrid-carvajal-shapes-geometry.pdf
-    articles:
-    - file: index.md
-      level: 0
-    short_citation: "Madrid-Carvajal et al., 2026"
-    caption_align: left
-    caption_fontsize: 8
-    heading_numbering: "none"
-
   toc:
   - file: index.md
 
-  id: isp-micropublication-template
+  id: isp-madrid-carvajal-2026-reward-shapes-geometry
   title: How reward and experience shape neural population dynamics in mouse visual cortex
   keywords:
   - unsupervised learning
   - reward-driven learning
   - tensor component analysis
   - population activity
-  github: https://github.com/impact-scholars/isp-micropublication-template
+  github: https://github.com/impact-scholars/madrid-carvajal-2026-reward-shapes-geometry
   bibliography:
   - bib.bib
-  # downloads:
-  # - file: supplementary-material.zip
-  #   title: Supplementary Material
+  exports:
+  - format: typst
+    id: typst-pdf
+    template: https://github.com/impact-scholars/isp-lapreprint-typst.git
+    breakable_figures: true
+    articles:
+    - file: index.md
+      title: null
