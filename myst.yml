@@ -1,18 +1,127 @@
 version: 1
 extends:
-- https://raw.githubusercontent.com/impact-scholars/impact-scholars.github.io/v0.2.0/nexus.yml
-- https://raw.githubusercontent.com/impact-scholars/isp-actions-config/v0.2.0/isp-micropublication-2025.yml
+- https://raw.githubusercontent.com/impact-scholars/impact-scholars.github.io/v0.1.0/nexus.yml
+- https://raw.githubusercontent.com/impact-scholars/isp-actions-config/v0.1.0/isp-micropublication-2025.yml
 
 project:
-  authors: []
+  # Uncomment and fill when published
+  # doi: 10.5281/zenodo.XXXXXXX
+  # date: YYYY-MM-DD
+  authors:
+  - name: Madrid-Carvajal, J.
+    orcid: 0000-0001-5505-6499
+    corresponding: true
+    email: john.madridcarvajal@uos.de
+    affiliations:
+    - Institute of Cognitive Science, University of Osnabrück, Germany
+    roles:
+    - Conceptualization
+    - Data curation
+    - Formal analysis
+    - Investigation
+    - Methodology
+    - Project administration
+    - Resources
+    - Software
+    - Validation
+    - Visualization
+    - Writing - original draft
+    - Writing - review & editing
+  - name: Jeswanth, R.
+    orcid: 0009-0000-8055-6559
+    equal_contributor: true
+    email: rohit.jeswanth@research.iiit.ac.in
+    affiliations:
+    - Cognitive Science Lab, International Institute of Information Technology, Hyderabad, India
+    roles:
+    - Conceptualization
+    - Formal analysis
+    - Investigation
+    - Methodology
+    - Resources
+    - Software
+    - Validation
+    - Writing - original draft
+    - Writing - review & editing
+  - name: Singh, I.
+    equal_contributor: true
+    email: singhishatpreet2002@gmail.com 
+    affiliations:
+    - Centre for Neuroscience, Indian Institute of Science, Bengaluru, India
+    roles:
+    - Conceptualization
+    - Formal analysis
+    - Investigation
+    - Methodology
+    - Resources
+    - Software
+    - Validation
+    - Writing - original draft
+    - Writing - review & editing
+  - name: Kaurinkoski, K.
+    orcid: 0000-0002-3897-8448
+    equal_contributor: true
+    email: katja.kaurinkoski@helsinki.fi 
+    affiliations:
+    - HiLIFE-Neuroscience Center, University of Helsinki, Finland
+    roles:
+    - Conceptualization
+    - Formal analysis
+    - Investigation
+    - Methodology
+    - Resources
+    - Software
+    - Validation
+    - Writing - original draft
+    - Writing - review & editing
+
+  - name: Maoutsa, D.
+    orcid: 0000-0002-3553-8658
+    corresponding: true
+    email: dimitra.maoutsa@gmail.com
+    affiliations:
+    - Neuromatch Inc.
+    roles:
+    - Conceptualization
+    - Data curation
+    - Formal analysis
+    - Investigation
+    - Methodology
+    - Project administration
+    - Resources
+    - Software
+    - Supervision
+    - Validation
+    - Visualization
+    - Writing - original draft
+    - Writing - review & editing
+
+  exports:
+  - format: typst
+    id: typst-pdf
+    template: templates/lapreprint-typst
+    output: exports/madrid-carvajal-shapes-geometry.pdf
+    articles:
+    - file: index.md
+      level: 0
+    short_citation: "Madrid-Carvajal et al., 2026"
+    caption_align: left
+    caption_fontsize: 8
+    heading_numbering: "none"
+
   toc:
   - file: index.md
-  id:
-  title:
-  keywords: []
-  github:
+
+  id: isp-micropublication-template
+  title: How reward and experience shape neural population dynamics in mouse visual cortex
+  keywords:
+  - unsupervised learning
+  - reward-driven learning
+  - tensor component analysis
+  - population activity
+  github: https://github.com/impact-scholars/isp-micropublication-template
   bibliography:
   - bib.bib
-
-site:
-  template: https://raw.githubusercontent.com/impact-scholars/myst-theme/v0.2.0/.deploy/book/template.yml
+  # downloads:
+  # - file: supplementary-material.zip
+  #   title: Supplementary Material
