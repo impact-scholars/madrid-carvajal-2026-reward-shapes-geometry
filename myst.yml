@@ -42,7 +42,7 @@ project:
     - Writing - review & editing
   - name: Ishatpreet Singh
     equal_contributor: true
-    email: singhishatpreet2002@gmail.com 
+    email: singhishatpreet2002@gmail.com
     affiliations:
     - Centre for Neuroscience, Indian Institute of Science, Bengaluru, India
     roles:
@@ -58,7 +58,7 @@ project:
   - name: Katja Kaurinkoski
     orcid: 0000-0002-3897-8448
     equal_contributor: true
-    email: katja.kaurinkoski@helsinki.fi 
+    email: katja.kaurinkoski@helsinki.fi
     affiliations:
     - HiLIFE-Neuroscience Center, University of Helsinki, Finland
     roles:
@@ -106,11 +106,3 @@ project:
   github: https://github.com/impact-scholars/madrid-carvajal-2026-reward-shapes-geometry
   bibliography:
   - bib.bib
-  exports:
-  - format: typst
-    id: typst-pdf
-    template: https://github.com/impact-scholars/isp-lapreprint-typst.git
-    breakable_figures: true
-    articles:
-    - file: index.md
-      title: null

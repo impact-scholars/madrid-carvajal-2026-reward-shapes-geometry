@@ -12,6 +12,8 @@ numbering:
   supplementary:
     enabled: true
     template: Supplementary Figure %s
+options:
+    breakable_figures: true
 ---
 
 A central challenge in systems neuroscience is that learning-related changes in cortical activity can arise either from unsupervised extraction of sensory regularities or from reward-driven assignment of behavioral relevance [@barlow1989unsupervised; @botvinick2020deep; @hebb2005organization]. Passive sensory experience may reshape cortical circuits by repeatedly exposing them to the statistical structure of the environment [@olshausen1996emergence; @bell1997independent; @simoncelli2001natural; @fiser2010statistically].  Reward-driven learning, by contrast, does not merely expose the animal to stimulus regularities, but also assigns behavioral utility to particular sensory events [@schultz2015neuronal; @schultz1997neural; @poort2015learning]. These two forms of learning are therefore computationally distinct: statistical learning extracts regularities from the environment, while rewarded learning uses those regularities to maximize reward [@pakan2018impact; @henschke2020reward; @ferrari2026learning]. Whether they produce similar or distinct changes in cortical population dynamics remain unresolved.
@@ -81,7 +83,7 @@ Together, our results suggest that reward-driven learning induces a task-aligned
 :alt: Shared vs. unique variance partition across cohorts.
 **Shared vs. unique variance distribution across TCA components.** For every session, the variance explained by the TCA model was partitioned, component by component, into a *unique part* (blue; the leave-one-out marginal contribution lost if only that component were removed from the model) and a *shared part* (orange; the overlap of that component with the remaining components, quantified as the pairwise cross-products between rank-1 component tensors). Components (x-axis) are shown in greedy incremental-VE order (C1 = highest variance-explaining). The two alignments (*top:* tunnel entrance; *bottom:* sound cue); rows are the before- and after-learning sessions and columns are the individual mice grouped by cohort (sup = rewarded; uns = unrewarded). Each panel is annotated with the model's total variance explained and the shared fraction, i.e. the proportion of the model-explained variance carried by inter-component overlap. Across mice, timepoints, and alignments, the rewarded cohort's components carry proportionally more unique variance (lower shared fraction) than the unrewarded cohort's, indicating that the lower-rank rewarded representation is assembled from more functionally independent modes.
 ```
-## Before versus after learning shared variance across components
+## Before versus after learning shared variance across components.
 
 ```{figure} figures/total_shared_ve_before_after.*
 :name: fig-supp-shared-variance-before-after
@@ -89,7 +91,7 @@ Together, our results suggest that reward-driven learning induces a task-aligned
 :alt: Before versus after learning shared variance across components
 **Total shared variance explained across components, before vs. after learning.** Per-session shared variance ($\mathrm{VE}_{\text{shared,total}}$, the proportion of the total data variance carried by overlap between the rank-1 TCA components, i.e. their summed pairwise cross-products) is shown for each mouse before and after learning. Faint lines are individual mice (one slope per animal connecting its before- and after-learning sessions); thick lines are cohort means. Left: trials aligned to tunnel entrance; Right: trials aligned to sound-cue onset. Green = rewarded, magenta = unrewarded; open markers = before learning, filled markers = after learning (triangles = rewarded, circles = unrewarded). Shared variance was consistently higher in the unrewarded than the rewarded cohort at both alignments, and changed only negligibly from before to after learning within each cohort, indicating that the greater inter-component overlap of the unrewarded representation is a stable cohort property rather than a learning-induced effect.
 ```
-**Shared vs. unique variance partition quantification.**
+## Shared vs. unique variance partition quantification.
 
 Because non-negative TCA components are not orthogonal, the variance explained by the full model is not the sum of the variances explained by each component individually: the rank-1 components overlap, and a leading component's variance-explained silently includes variance it shares with the others. To separate these contributions we partitioned, for each session and alignment, the variance explained by the TCA model into a *unique* and a *shared* part per component.
 
@@ -169,7 +171,7 @@ E = \| \boldsymbol{\mathcal{X}} - \hat{\boldsymbol{\mathcal{X}}} \|_F^2 = \sum_{
 The optimal rank $R$ was determined by identifying the elbow of the reconstruction error curve using the Kneedle algorithm, ensuring a balance between model complexity and explanatory power.
 
 ### Component Reordering and Variance Explained
-<span style="color:#b00020; font-weight:600;">TODO: Fix this becuase i noticed that  "Component Reordering" methods paragraph (lines 128–134) describes the Gram-matrix version of the greedy ordering, but the notebook actually runs with REORDER_BY = "tensor". </span>
+<!-- <span style="color:#b00020; font-weight:600;">TODO: Fix this becuase i noticed that  "Component Reordering" methods paragraph (lines 128–134) describes the Gram-matrix version of the greedy ordering, but the notebook actually runs with REORDER_BY = "tensor". </span> -->
 
 Because non-negative TCA components are not inherently orthogonal, the total variance explained (VE) is not the simple sum of individual component variances. To address this, we implemented a greedy incremental variance explained reordering (following the methodology of John Niebur). 
 
@@ -182,11 +184,11 @@ Components were then reordered using a forward-selection greedy algorithm. The f
 ### Stimulus Selectivity and other Statistical Analyses
 
 To evaluate the functional relevance of the identified latent components, we performed several downstream analyses:
-- Trial Factor Selectivity: We quantified how well each component discriminated between visual stimuli (e.g., leaf vs. circle) by comparing the distributions of trial factors  associated with each stimulus class.
-- Linear Classifier: We trained a logistic regression decoder on the trial factors using Leave-One-Out - Cross-Validation (LOO CV). This allowed us to determine the accuracy and Area Under the ROC Curve (AUC) for predicting stimulus identity based on the latent neural state.
-- Learning Curves: Trials were divided into chronological blocks (early, mid, late). By calculating the classification performance within each block, we tracked the temporal evolution of representational discriminability, allowing us to compare learning dynamics between the Rewarded (Supervised) and Unrewarded (Unsupervised) cohorts.
-- Cohen’s d: Cohen's d is an appropriate selectivity index because it is scale-invariant — making it directly comparable across components, sessions, and cohorts whose nonneg trial weights differ in absolute magnitude — and its sign encodes the direction of preference: d > 0 indicates higher loadings on leaf1 trials, while d < 0 indicates higher loadings on circle1 trials
-- Mixed effects model for discriminability: Cohort × timepoint × block effects were tested in a linear mixed-effects model with mouse as a random intercept (auc ~ C(cohort) * C(timepoint) * block_num, n = 36 block × session observations per alignment, 6 mice).
+- **Trial Factor Selectivity**: We quantified how well each component discriminated between visual stimuli (e.g., leaf vs. circle) by comparing the distributions of trial factors  associated with each stimulus class.
+- **Linear Classifier**: We trained a logistic regression decoder on the trial factors using Leave-One-Out - Cross-Validation (LOO CV). This allowed us to determine the accuracy and Area Under the ROC Curve (AUC) for predicting stimulus identity based on the latent neural state.
+- **Learning Curves**: Trials were divided into chronological blocks (early, mid, late). By calculating the classification performance within each block, we tracked the temporal evolution of representational discriminability, allowing us to compare learning dynamics between the Rewarded (Supervised) and Unrewarded (Unsupervised) cohorts.
+- **Cohen’s d**: Cohen's d is an appropriate selectivity index because it is scale-invariant — making it directly comparable across components, sessions, and cohorts whose nonneg trial weights differ in absolute magnitude — and its sign encodes the direction of preference: d > 0 indicates higher loadings on leaf1 trials, while d < 0 indicates higher loadings on circle1 trials
+- **Mixed effects model for discriminability**: Cohort × timepoint × block effects were tested in a linear mixed-effects model with mouse as a random intercept (auc ~ C(cohort) * C(timepoint) * block_num, n = 36 block × session observations per alignment, 6 mice).
 
 ### Participation ratio analysis
 
