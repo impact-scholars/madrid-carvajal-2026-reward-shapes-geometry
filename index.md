@@ -6,6 +6,9 @@ acknowledgments: |
     This work was supported by the Impact Scholars Program. General-purpose large language models were used for grammar and writing corrections, and for limited code assistance (such as handling error messages and for parallelising and speeding up computations).
 data_availability: |
     Published via [Impact Scholars](https://github.com/impact-scholars/madrid-carvajal-2026-reward-shapes-geometry); original [development repository](https://github.com/JohnMadrid/madrid-carvajal-2026-reward-shapes-geometry).
+parts:
+  zenodo_extra_description: |
+    Author contribution note: Katja Kaurinkoski, Rohit Jeswanth, and Ishatpreet Singh contributed equally to this work and share second authorship.
 numbering:
   figure:
     template: Figure %s
