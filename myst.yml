@@ -5,7 +5,7 @@ extends:
 
 project:
   authors:
-  - name: John Jairo Madrid-Carvajal
+  - name: John Madrid-Carvajal
     orcid: 0000-0001-5505-6499
     corresponding: true
     email: john.madridcarvajal@uos.de
