@@ -105,6 +105,11 @@ project:
   - tensor component analysis
   - population activity
   github: https://github.com/impact-scholars/madrid-carvajal-2026-reward-shapes-geometry
+  options:
+    youtube: https://youtu.be/5_Fvx-1cg3c?t=2893
+  downloads:
+  - title: Seminar Presentation
+    url: https://youtu.be/5_Fvx-1cg3c?t=2893
   bibliography:
   - bib.bib
   doi: 10.5281/zenodo.20626343
